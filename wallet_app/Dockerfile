@@ -13,6 +13,6 @@ COPY . .
 COPY .env /app/.env
 
 
-RUN python manage.py collectstatic --noinput
+RUN python manage.py collectstatic --noinputs
 
 CMD ["gunicorn", "wallet_app.wsgi:application", "--bind", "0.0.0.0:8000"]
